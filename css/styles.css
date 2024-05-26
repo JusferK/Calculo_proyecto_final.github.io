@@ -1,0 +1,14 @@
+input[type=number] {
+    -mox-appearence: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputs_en_math_contenedor {
+    width: 15px;
+    padding: 0;
+}
