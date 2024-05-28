@@ -5,115 +5,123 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Optimizacion</title>
         <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/interactividad.js" defer></script>
     </head>
     <body>
         <div>
             <h1>Optimizacion</h1>
         </div>
-        <div id="selectores" class="">
-            <label>Reglas de las derivadas</label>
-            <label>Enunciado</label>
+        <div id="selectores" class="labels_selectores">
+            <label id="label_reglas_de_derivadas">Reglas de las derivadas</label>
+            <br>
+            <label id="label_enunciado">Enunciado</label>
         </div>
-        <div id="reglas_de_derivacion">
-            <select id="reglas_de_las_derivadas">
-                <option value="default">selecciona</option>
-                <option value="definicion">Por definicion</option>
-                <option value="producto">Regla del producto</option>
-                <option value="cociente">Regla del cociente</option>
-                <option value="cadena">Regla de la cadena</option>
-                <option value="funciones trigonometrias">Regla para las funciones trigonometrias</option>
-                <option value="logaritmicas">Regla para derivadas logaritmicas</option>
-                <option value="exponenciales">Regla para funcionen exponenciales </option>
-            </select>
-            <div id="contendor_para_reglas"></div>
-        </div>
-        <div id="enunciado-solucion">
-            <div id="texto">
-                <h2>Enunciado</h2>
-                <div class="parrafo">
-                    <p>
-                        La compañía Cartones GT se especializa en la fabricación de cajas cuadradas de dimensiones
-                        específicas para el embalaje de diversos productos. El equipo de control de calidad ha 
-                        identificado un problema de desperdicio durante el proceso de fabricación de las cajas, 
-                        ya que quedan piezas cuadradas de diferentes tamaños como remanentes. Según los estándares
-                        de calidad establecidos, se ha concluido que estas piezas aun pueden ser integradas a la 
-                        cadena productiva.
-                    </p>
-                    <p>
-                        Los pedazos cuadrados de cartón que se utilizarán para realizar los nuevos productos, se
-                        cortan según la Figura 6, un cuadrado de cada esquina y doblando los lados. Los
-                        cuadrados blancos se han cortado y el cartón se ha doblado a lo largo de las líneas
-                        discontinuas. Dependiendo de la medida del cartón cuadrado se obtienen cajas de
-                        distintos volúmenes.
-                    </p>
-                    <p>
-                        En una junta directiva, el equipo de ventas logra encontrar un nuevo mercado para cajas
-                        de distintos tamaños por lo que se le ha pedido al equipo de informática un software
-                        para determinar el volumen máximo de cada uno de los retazos, siguiendo solamente la
-                        arista h (ver Figura 6) del cuadrado.
-                    </p>
-                </div>
-                <img src="./sources/figura_6.png" alt="Diseño modificado, tomado de Zill, Dennis G., y Warren S. Wright (2011) Cálculo
-                De Una Variables: Trascendentes Tempranas. 4a. ed. Editorial: McGraw-Hill" title="figura 6" style="border: 1px solid black; padding: 0px; margin: 0px;">
+
+        <div class="conteneder_principal">
+            <div id="reglas_de_derivacion">
+                <select id="reglas_de_las_derivadas">
+                    <option value="default">selecciona</option>
+                    <option value="definicion">Por definicion</option>
+                    <option value="producto">Regla del producto</option>
+                    <option value="cociente">Regla del cociente</option>
+                    <option value="cadena">Regla de la cadena</option>
+                    <option value="funciones trigonometrias">Regla para las funciones trigonometrias</option>
+                    <option value="logaritmicas">Regla para derivadas logaritmicas</option>
+                    <option value="exponenciales">Regla para funcionen exponenciales </option>
+                </select>
+                <div id="contendor_para_reglas"></div>
             </div>
-            <div id="resolucion">
-                <label for="">de dimension h = </label>
-                <input type="number" id="arista" class="input_independiente">
-                <label for="">metros</label>
-                <label>El cambio de volumen respecto a la altura <em>a</em> cumple con la siguiente funcion: </label>
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mfrac>
-                      <mi>dV</mi>
-                      <mi>da</mi>
-                    </mfrac>
-                    <mo>=</mo>
-                    <msup>
-                      <mi><input type="number" class="inputs_en_math_contenedor"></mi>
-                      <mn>3</mn>
-                    </msup>
-                    <mo>-</mo>
-                    <mn>4</mn>
-                    <mi><input type="number" class="inputs_en_math_contenedor"></mi>
-                    <msup>
-                      <mi><input type="number" class="inputs_en_math_contenedor"></mi>
-                      <mn>2</mn>
-                    </msup>
-                    <mo>+</mo>
-                    <mi><input type="number" class="inputs_en_math_contenedor"></mi>
-                    <msup>
-                      <mi><input type="number" class="inputs_en_math_contenedor"></mi>
-                      <mn>2</mn>
-                    </msup>
-                </math>
-                <p>
-                    El volumen maximo de la caja en 
+            <div id="enunciado_solucion">
+                <div id="texto">
+                    <h2>Enunciado</h2>
+                    <div class="parrafo">
+                        <p>
+                            La compañía Cartones GT se especializa en la fabricación de cajas cuadradas de dimensiones
+                            específicas para el embalaje de diversos productos. El equipo de control de calidad ha 
+                            identificado un problema de desperdicio durante el proceso de fabricación de las cajas, 
+                            ya que quedan piezas cuadradas de diferentes tamaños como remanentes. Según los estándares
+                            de calidad establecidos, se ha concluido que estas piezas aun pueden ser integradas a la 
+                            cadena productiva.
+                        </p>
+                        <p>
+                            Los pedazos cuadrados de cartón que se utilizarán para realizar los nuevos productos, se
+                            cortan según la Figura 6, un cuadrado de cada esquina y doblando los lados. Los
+                            cuadrados blancos se han cortado y el cartón se ha doblado a lo largo de las líneas
+                            discontinuas. Dependiendo de la medida del cartón cuadrado se obtienen cajas de
+                            distintos volúmenes.
+                        </p>
+                        <p>
+                            En una junta directiva, el equipo de ventas logra encontrar un nuevo mercado para cajas
+                            de distintos tamaños por lo que se le ha pedido al equipo de informática un software
+                            para determinar el volumen máximo de cada uno de los retazos, siguiendo solamente la
+                            arista h (ver Figura 6) del cuadrado.
+                        </p>
+                    </div>
+                    <img src="./sources/figura_6.png" alt="Diseño modificado, tomado de Zill, Dennis G., y Warren S. Wright (2011) Cálculo
+                    De Una Variables: Trascendentes Tempranas. 4a. ed. Editorial: McGraw-Hill" title="figura 6" style="border: 1px solid black; padding: 0px; margin: 0px;">
+                </div>
+                <div id="resolucion">
+                    <label for="arista">de dimension "<em>h</em>" = </label>
+                    <input type="number" id="arista" class="input_independiente">
+                    <label>m.</label> <!--cambiar a p luego-->
+                    <br>
+                    <label>El cambio de volumen respecto a la altura <em>a</em> cumple con la siguiente funcion: </label>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mfrac>
+                          <mi>dV</mi>
+                          <mi>da</mi>
+                        </mfrac>
+                        <mo>=</mo>
+                        <msup>
+                          <mi>a</mi>
+                          <mn>3</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <mn class="mn_multiplicador">4</mn>
+                        <mi><input type="number" class="inputs_en_math_contenedor_arista"></mi>
+                        <msup>
+                          <mi>a</mi>
+                          <mn>2</mn>
+                        </msup>
+                        <mo>+</mo>
+                        <mi>a</mi>
+                        <msup>
+                          <mi><input type="number" class="inputs_en_math_contenedor_arista"></mi>
+                          <mn>2</mn>
+                        </msup>
+                    </math>
+                    <p>
+                        El volumen maximo de la caja en 
+                        <math>
+                            <msup>
+                                <mi>m</mi>
+                                <mn>3</mn>
+                            </msup>
+                        </math> 
+                        es de:
+                        
+                    </p>
+                <label>V = <label id="respuesta_del_volumen_maximo" class="respuesta_volumen"></label></label>
+                <p>Demostrando que el volumen es maximo con el valor de la segunda derivada"</p>
+                <p style="font-size: 20px;">
                     <math>
                         <msup>
-                            <mi>m</mi>
-                            <mn>3</mn>
+                            <mi style="font-size: 40px;">f</mi>
+                            <mrow>
+                                <mi style="font-size: 25px;">&#x2032;&#x2032;</mi>
+                            </mrow>
                         </msup>
-                    </math> 
-                    es de:
+                        <mo style="font-size: 24px;">(</mo>
+                        <mi style="font-size: 24px;">x</mi>
+                        <mo style="font-size: 24px;">)</mo>
+                    </math>
+                     = 
                 </p>
-            <label id="respuesta_del_volumen_maximo" class="respuesta_volumen">V = </label>
-            <p>Demostrando que el volumen es maximo con el valor de la segunda derivada"</p>
-            <p style="font-size: 20px;">
-                <math>
-                    <msup>
-                        <mi style="font-size: 40px;">f</mi>
-                        <mrow>
-                            <mi style="font-size: 25px;">&#x2032;&#x2032;</mi>
-                        </mrow>
-                    </msup>
-                    <mo style="font-size: 24px;">(</mo>
-                    <mi style="font-size: 24px;">x</mi>
-                    <mo style="font-size: 24px;">)</mo>
-                </math>
-                 = 
-            </p>
-            <label id="respuesta_de_la_segunda_derivada"></label>
+                <label id="respuesta_de_la_segunda_derivada"></label>
+                </div>
             </div>
         </div>
-        <script src="./js/script.js"></script>
+
+        <script src="./js/resolucion_de_problema.js"></script>
     </body>
 </html>
