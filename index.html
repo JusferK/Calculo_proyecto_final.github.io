@@ -8,32 +8,975 @@
         <script src="./js/interactividad.js" defer></script>
     </head>
     <body>
-        <div>
+        <div class="contenedor_titulo">
             <h1>Optimizacion</h1>
         </div>
-        <div id="selectores" class="labels_selectores">
-            <label id="label_reglas_de_derivadas">Reglas de las derivadas</label>
-            <br>
-            <label id="label_enunciado">Enunciado</label>
-        </div>
-
         <div class="conteneder_principal">
-            <div id="reglas_de_derivacion">
+            <div id="selectores" class="labels_selectores">
+                <label id="label_reglas_de_derivadas">Reglas de las derivadas</label>
+                <label id="label_enunciado">Enunciado</label>
+            </div>
+            <div id="reglas_de_derivacion" class="contenedor_de_las_derivadas">
                 <select id="reglas_de_las_derivadas">
-                    <option value="default">selecciona</option>
-                    <option value="definicion">Por definicion</option>
+                    <option value="definicion" selected>Por definicion</option>
                     <option value="producto">Regla del producto</option>
                     <option value="cociente">Regla del cociente</option>
                     <option value="cadena">Regla de la cadena</option>
-                    <option value="funciones trigonometrias">Regla para las funciones trigonometrias</option>
+                    <option value="funciones trigonometricas">Regla para las funciones trigonometricas</option>
                     <option value="logaritmicas">Regla para derivadas logaritmicas</option>
                     <option value="exponenciales">Regla para funcionen exponenciales </option>
                 </select>
-                <div id="contendor_para_reglas"></div>
+                <div class="contenedor_para_reglas">
+                    <div class="contenedor_regla" id="contenedor_regla_dinamico">
+                        <div id="contenedor_por_definicion"> 
+                            <h3>Derivada</h3>
+                            <math>
+                                <mrow>
+                                  <mi>f</mi>
+                                  <mspace width="0.4em"/>
+                                  <mo>&#x2032;</mo>
+                                  <mo>(</mo>
+                                  <mi>x</mi>
+                                  <mo>)</mo>
+                                  <mfrac>
+                                  <mo>=</mo>
+                                  <munder>
+                                    <mo>lim</mo>
+                                    <mrow>
+                                      <mi>h</mi>
+                                      <mo>&#x2192;</mo>
+                                      <mn>0</mn>
+                                    </mrow>
+                                  </munder>
+                                  <mfrac>
+                                    <mrow>
+                                      <mi>f</mi>
+                                      <mspace width="0.4em"/>
+                                      <mo>(</mo>
+                                      <mi>x</mi>
+                                      <mo>+</mo>
+                                      <mi>h</mi>
+                                      <mo>)</mo>
+                                      <mo>&#x2212;</mo>
+                                      <mi>f</mi>
+                                      <mspace width="0.4em"/>
+                                      <mo>(</mo>
+                                      <mi>x</mi>
+                                      <mo>)</mo>
+                                    </mrow>
+                                    <mi>h</mi>
+                                  </mfrac>
+                                </mrow>
+                            </math>            
+                        </div>
+
+                        <div id="contenedor_del_producto">
+                            <div>
+                                <h3>Sin derivar</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                      <mi>f</mi>
+                                      <mspace width="0.4em"/>
+                                      <mo stretchy="false">(</mo>
+                                      <mrow>
+                                        <mi>x</mi>
+                                      </mrow>
+                                      <mo stretchy="false">)</mo>
+                                    </mrow>
+                                    <mo>=</mo>
+                                  <mrow>
+                                    <mrow>
+                                      <mi>f</mi>
+                                      <mspace width="0.4em"/>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mi>x</mi>
+                                        <mo>)</mo>
+                                      </mrow>
+                                    </mrow>
+                                    <mo>*</mo>
+                                    <mrow>
+                                      <mi>g</mi>
+                                      <mspace width="0.4em"/>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mi>x</mi>
+                                        <mo>)</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </mrow>
+                                </math>
+                            </div>
+
+                            <div>
+                                <h3>Derivada</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                      <mi>f</mi>
+                                      <mspace width="0.4em"/>
+                                      <mo>&#x2032;</mo>
+                                      <mo stretchy="false">(</mo>
+                                      <mrow>
+                                        <mi>x</mi>
+                                      </mrow>
+                                      <mo stretchy="false">)</mo>
+                                    </mrow>
+                                    <mo>=</mo>
+                                  <mrow>
+                                    <mrow>
+                                      <mi>f</mi>
+                                      <mspace width="0.4em"/>
+                                      <mo>&#x2032;</mo>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mi>x</mi>
+                                        <mo>)</mo>
+                                      </mrow>
+                                      <mspace width="0.4em"/>
+                                      <mi>g</mi>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mi>x</mi>
+                                        <mo>)</mo>
+                                      </mrow>
+                                    </mrow>
+                                    <mo>+</mo>
+                                    <mrow>
+                                      <mi>f</mi>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mi>x</mi>
+                                        <mo>)</mo>
+                                      </mrow>
+                                      <mspace width="0.4em"/>
+                                      <mi>g</mi>
+                                      <mspace width="0.4em"/>
+                                      <mo>&#x2032;</mo>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mi>x</mi>
+                                        <mo>)</mo>
+                                      </mrow>
+                                    </mrow>
+                                  </mrow>
+                                </math>
+                            </div>
+                        </div>
+
+
+                        <div id="contenedor_del_cociente">
+                            <div>
+                                <h3>Sin derivar</h3>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mirow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mirow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>f</mi>
+                                            <mspace width="0.4em"/>
+                                            <mirow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </mirow>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>g</mi>
+                                            <mspace width="0.4em"/>
+                                            <mirow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </mirow>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </div>
+
+                            <div>
+                                <h3>Derivada</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mi>f</mi>
+                                    <mspace width="0.4em"/>
+                                    <mo>&#x2032;</mo>
+                                    <mirow>
+                                        <mo stretchy="false">(</mo>
+                                        <mi>x</mi>
+                                        <mo stretchy="false">)</mo>
+                                    </mirow>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>f</mi>
+                                            <mspace width="0.4em"/>
+                                            <mo>&#x2032;</mo>
+                                            <mrow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </mrow>
+                                            <mspace width="0.4em"/>
+                                            <mo>*</mo>
+                                            <mspace width="0.4em"/>
+                                            <mrow>
+                                                <mi>g</mi>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                            <mspace width="0.4em"/>
+                                            <mo>-</mo>
+                                            <mspace width="0.4em"/>
+                                            <mrow>
+                                                <mi>f</mi>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                                <mspace width="0.4em"/>
+                                                <mo>*</mo>
+                                                <mspace width="0.4em"/>
+                                                <mi>g</mi>
+                                                <mspace width="0.4em"/>
+                                                <mo>&#x2032;</mo>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                            </mrow>
+                                            </mrow>
+                                        </mrow>
+                                        <mrow>
+                                            <msup>
+                                                <mi>
+                                                    <mfenced open="[" close="[]">
+                                                        <mo stretchy="false">[</mo>
+                                                        <mi>g</mi>
+                                                        <mrow>
+                                                            <mo stretchy="false">(</mo>
+                                                            <mi>x</mi>
+                                                            <mo stretchy="false">)</mo>
+                                                        </mrow>
+                                                        <mo stretchy="false">]</mo>
+                                                    </mfenced>
+                                                </mi>
+                                                <mn>2</mn>
+                                            </msup>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </div>
+                        </div>
+
+                        <div id="contenedor_de_la_cadena">
+                            <div>
+                                <h3>Sin derivar</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo stretchy="false">(</mo>
+                                        <mi>x</mi>
+                                        <mo stretchy="false">)</mo>
+                                        <mo>=</mo>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mfenced>
+                                                <mo stretchy="false">[</mo>
+                                                <mi>g</mi>
+                                                <mspace width="0.4em"/>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                                <mo stretchy="false">]</mo>
+                                            </mfenced>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                            </div>
+
+                            <div>
+                                <h3>Derivada</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mo stretchy="false">(</mo>
+                                        <mi>x</mi>
+                                        <mo stretchy="false">)</mo>
+                                        <mo>=</mo>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mfenced>
+                                                <mo stretchy="false">[</mo>
+                                                <mi>g</mi>
+                                                <mspace width="0.4em"/>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                                <mo stretchy="false">]</mo>
+                                            </mfenced>
+                                        </mrow>
+                                        <mspace width="0.4em"/>
+                                        <mo>*</mo>
+                                        <mrow>
+                                            <mi>g</mi>
+                                            <mspace width="0.4em"/>
+                                            <mo>&#x2032;</mo>
+                                            <mrow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </mrow>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                            </div>
+                        </div>
+
+                        <div id="contenedor_de_funciones_trigonometricas">
+                            <div>
+                                <h3>Sin derivar</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>cos</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+
+                                <br>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>sen</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+
+                                <br>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>tan</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+
+                                <br>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>csc</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+
+                                <br>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>sec</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+
+                                <br>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>cot</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                            </div>
+
+                            <div>
+                                <h3>Derivadas</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                <mo>&#x2032;</mo>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>- sen</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                <mo>&#x2032;</mo>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>cos</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <msup>
+                                            <mi>sec</mi>
+                                            <mi>2</mi>
+                                        </msup>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>- csc</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mspace width="0.4em"/>
+                                    <mo>*</mo>
+                                    <mspace width="0.4em"/>
+                                    <mrow>
+                                        <mi>cot</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>sec</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mspace width="0.4em"/>
+                                    <mo>*</mo>
+                                    <mspace width="0.4em"/>
+                                    <mrow>
+                                        <mi>tan</mi>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <msup>
+                                            <mi>- csc</mi>
+                                            <mi>2</mi>
+                                        </msup>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                            </div>
+                        </div>
+
+                        <div id="contenedor_de_funciones_logaritmicas">
+                            <div>
+                                <h3>Sin derivar</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>ln</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>ln</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>*</mo>
+                                        <mspace width="0.3em"/>
+                                        <mi>f</mi>
+                                        <mspace width="0.3em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.2em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <msub>
+                                        <mi>log</mi>
+                                        <mi>a</mi>
+                                        </msub>
+                                        <mi>U</mi>
+                                    </mrow>
+                                </math>
+                            </div>
+
+                            <div>
+                                <h3>Derivada</h3>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mfrac>
+                                            <mrow>
+                                                <mn>1</mn>
+                                            </mrow>
+                                            <mrow>
+                                                <mo>x</mo>
+                                            </mrow>
+                                        </mfrac>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.2em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mfrac>
+                                            <mrow>
+                                                <mn>1</mn>
+                                            </mrow>
+                                            <mrow>
+                                                <mi>f</mi>
+                                                <mspace width="0.2em"/>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                            </mrow>
+                                        </mfrac>
+                                    </mrow>
+                                    <mspace width="0.2em"/>
+                                    <mo>*</mo>
+                                    <mspace width="0.2em"/>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.2em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                                
+                                <br>
+                                
+                                <math>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.2em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <!---->
+                                    <mrow>
+                                        <mfrac>
+                                            <mrow>
+                                                <mn>1</mn>
+                                            </mrow>
+                                            <mrow>
+                                                <mi>Ln</mi>
+                                                <mspace width="0.2em"/>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>a</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                            </mrow>
+                                        </mfrac>
+                                    </mrow>
+                                    <mspace width="0.2em"/>
+                                    <mo>*</mo>
+                                    <mspace width="0.2em"/>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>f</mi>
+                                            <mspace width="0.2em"/>
+                                            <mo>&#x2032;</mo>
+                                            <mrow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </mrow>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>f</mi>
+                                            <mspace width="0.2em"/>
+                                            <mrow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>x</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </mrow>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </div>
+                        </div>
+
+                        <div id="contenedor_de_funciones_exponenciales">
+                            <div>
+                                <h3>Sin derivar</h3>
+
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <msup>
+                                        <mi>a</mi>
+                                        <mn>
+                                            <mrow>
+                                                <mi>f</mi>
+                                                <mrow>
+                                                    <mo stretchy="false">(</mo>
+                                                    <mi>x</mi>
+                                                    <mo stretchy="false">)</mo>
+                                                </mrow>
+                                            </mrow>
+                                        </mn>
+                                    </msup>
+                                </math>
+                            </div>
+
+                            <div>
+                                <h3>Derivada</h3>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <msup>
+                                            <mi>a</mi>
+                                            <mn>
+                                                <mrow>
+                                                    <mi>f</mi>
+                                                    <mrow>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>x</mi>
+                                                        <mo stretchy="false">)</mo>
+                                                    </mrow>
+                                                </mrow>
+                                            </mn>
+                                        </msup>
+                                    </mrow>
+                                    <mspace width="0.4em"/>
+                                    <mo>*</mo>
+                                    <mspace width="0.4em"/>
+                                    <mrow>
+                                        <mrow>
+                                            <mi>ln</mi>
+                                            <mspace width="0.4em"/>
+                                            <mi>a</mi>
+                                        </mrow>
+                                    </mrow>
+                                    <mspace width="0.4em"/>
+                                    <mo>*</mo>
+                                    <mspace width="0.4em"/>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
+                                        <mrow>
+                                            <mo stretchy="false">(</mo>
+                                            <mi>x</mi>
+                                            <mo stretchy="false">)</mo>
+                                        </mrow>
+                                    </mrow>
+                                </math>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="contenedor_contexto" id="contenedor_dinamico_contexto">
+                    </div>
+                </div>
             </div>
-            <div id="enunciado_solucion">
+            <div id="enunciado_solucion" class="contenedor_enunciado_solucion">
                 <div id="texto">
-                    <h2>Enunciado</h2>
                     <div class="parrafo">
                         <p>
                             La compañía Cartones GT se especializa en la fabricación de cajas cuadradas de dimensiones
@@ -123,5 +1066,6 @@
         </div>
 
         <script src="./js/resolucion_de_problema.js"></script>
+        <script src="./js/creacion_de_formulas_derivadas.js"></script>
     </body>
 </html>

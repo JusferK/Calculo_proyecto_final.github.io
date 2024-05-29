@@ -1,3 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1, p, label, math {
+    color: white;
+}
+
+body {
+    margin: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(40,40,40,1) 25%, rgba(120,120,120,1) 50%, rgba(192,192,192,1) 75%, rgba(255,255,255,1) 100%); 
+}
+
 input[type=number] {
     -mox-appearence: textfield;
 }
@@ -8,8 +26,96 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+.contenedor_titulo {
+    margin: 0px;
+    padding: 30px;
+}
+
 h1 {
     text-align: center;
+    height: 40px;
+    margin: 0px;
+}
+
+.conteneder_principal {
+    margin: 20px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    flex-grow: 2;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10%);
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 4px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.labels_selectores {
+    margin: 40px;
+    width: 96.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60px;
+}
+
+#label_reglas_de_derivadas, #label_enunciado {
+    align-self: center;
+}
+
+.contenedor_de_las_derivadas {
+    margin: 20px;
+    width: 96.5%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    flex-grow: 2;
+    align-items: center;
+}
+
+.contenedor_de_las_derivadas select {
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(30px);
+}
+
+select:focus {
+    outline: none;
+}
+
+.contenedor_para_reglas {
+    width: 90%;
+    height: 93%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contenedor_regla {
+    width: 75%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(30px);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.contenedor_contexto {
+    width: 25%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(1, 1, 1, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .inputs_en_math_contenedor_altura, .inputs_en_math_contenedor_arista {
@@ -19,13 +125,10 @@ h1 {
     text-align: center;
 }
 
-.hidden_class {
-    display: none;
-}
-
 math {
     padding: 0px;
     margin: 0px;
+    color: black;
 }
 
 mi {
@@ -33,3 +136,6 @@ mi {
     margin: 0px;
 }
 
+.hidden_class {
+    display: none;
+}
