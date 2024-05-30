@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
     etiqueta_reglas_de_derivada.style.fontSize = '20px';
     etiqueta_reglas_de_derivada.style.borderRadius = '10px';
 
+    etiqueta_enunciado_solucion.style.padding = '10px';
+    etiqueta_enunciado_solucion.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+    etiqueta_enunciado_solucion.style.fontSize = '16px';
+    etiqueta_enunciado_solucion.style.borderRadius = '10px';
+
     for(let i = 1; i < lista_de_contenedores_de_reglas.length; i++) {
         lista_de_contenedores_de_reglas[i].classList.add('hidden_class');
     }
@@ -43,11 +48,11 @@ etiqueta_enunciado_solucion.addEventListener('click', () => {
     etiqueta_enunciado_solucion.style.fontSize = '20px';
     etiqueta_enunciado_solucion.style.borderRadius = '10px';
 
-    etiqueta_reglas_de_derivada.style.padding = '0px';
+    etiqueta_reglas_de_derivada.style.padding = '10px';
     etiqueta_reglas_de_derivada.style.fontSize = '16px';
-    etiqueta_reglas_de_derivada.style.borderRadius = '0px';
+    etiqueta_reglas_de_derivada.style.borderRadius = '10px';
     etiqueta_reglas_de_derivada.style.transition = '0.2s ease-in';
-    etiqueta_reglas_de_derivada.style.border = '0px';
+    etiqueta_reglas_de_derivada.style.border = '1px solid rgba(255, 255, 255, 0.3)';
 
 });
 
@@ -61,11 +66,11 @@ etiqueta_reglas_de_derivada.addEventListener('click', () => {
         etiqueta_reglas_de_derivada.style.borderRadius = '10px';
         etiqueta_reglas_de_derivada.style.border = '1px solid white';
 
-        etiqueta_enunciado_solucion.style.padding = '0px';
+        etiqueta_enunciado_solucion.style.padding = '10px';
         etiqueta_enunciado_solucion.style.fontSize = '16px';
-        etiqueta_enunciado_solucion.style.borderRadius = '0px';
+        etiqueta_enunciado_solucion.style.borderRadius = '10px';
         etiqueta_enunciado_solucion.style.transition = '0.2s ease-in';
-        etiqueta_enunciado_solucion.style.border = '0px';
+        etiqueta_enunciado_solucion.style.border = '1px solid rgba(255, 255, 255, 0.3)';
 });
 
 
@@ -87,10 +92,10 @@ for(let i = 0; i < lista_de_etiquetas.length; i++) {
 
     lista_de_etiquetas[i].addEventListener('mouseout', () => {
         if(lista_de_etiquetas[i] !== seleccionado) {
-            lista_de_etiquetas[i].style.padding = '0';
-            lista_de_etiquetas[i].style.border = '0px';
+            lista_de_etiquetas[i].style.padding = '10px';
+            lista_de_etiquetas[i].style.border = '1px solid rgba(255, 255, 255, 0.3)';
             lista_de_etiquetas[i].style.fontSize = '16px';
-            lista_de_etiquetas[i].style.borderRadius = '0px';
+            lista_de_etiquetas[i].style.borderRadius = '10px';
             lista_de_etiquetas[i].style.transition = '0.2s ease-out';
         }
     });

@@ -4,31 +4,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Optimizacion</title>
-        <link rel="stylesheet" href="./css/styles.css">
         <script src="./js/interactividad.js" defer></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="contenedor_titulo">
-            <h1>Optimizacion</h1>
+            <h1>Optimización</h1>
         </div>
         <div class="conteneder_principal">
+            
             <div id="selectores" class="labels_selectores">
                 <label id="label_reglas_de_derivadas">Reglas de las derivadas</label>
                 <label id="label_enunciado">Enunciado</label>
             </div>
+
             <div id="reglas_de_derivacion" class="contenedor_de_las_derivadas">
                 <select id="reglas_de_las_derivadas">
-                    <option value="definicion" selected>Por definicion</option>
+                    <option value="definicion" selected>Por definición</option>
                     <option value="producto">Regla del producto</option>
                     <option value="cociente">Regla del cociente</option>
                     <option value="cadena">Regla de la cadena</option>
                     <option value="funciones trigonometricas">Regla para las funciones trigonometricas</option>
-                    <option value="logaritmicas">Regla para derivadas logaritmicas</option>
+                    <option value="logaritmicas">Regla para derivadas logarítmicas</option>
                     <option value="exponenciales">Regla para funcionen exponenciales </option>
                 </select>
                 <div class="contenedor_para_reglas">
                     <div class="contenedor_regla" id="contenedor_regla_dinamico">
-                        <div id="contenedor_por_definicion"> 
+                        <div id="contenedor_por_definicion" class="contenedor_por_definicion_class"> 
                             <h3>Derivada</h3>
                             <math>
                                 <mrow>
@@ -70,8 +75,8 @@
                             </math>            
                         </div>
 
-                        <div id="contenedor_del_producto">
-                            <div>
+                        <div id="contenedor_del_producto" class="contenedor_producto_class">
+                            <div class="sin_derivar_producto">
                                 <h3>Sin derivar</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -108,7 +113,7 @@
                                 </math>
                             </div>
 
-                            <div>
+                            <div class="derivada_producto">
                                 <h3>Derivada</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -164,8 +169,8 @@
                         </div>
 
 
-                        <div id="contenedor_del_cociente">
-                            <div>
+                        <div id="contenedor_del_cociente" class="contenedor_cociente_class">
+                            <div class="sin_derivar_cociente">
                                 <h3>Sin derivar</h3>
 
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -202,7 +207,7 @@
                                 </math>
                             </div>
 
-                            <div>
+                            <div class="derivada_cociente">
                                 <h3>Derivada</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mi>f</mi>
@@ -280,8 +285,8 @@
                             </div>
                         </div>
 
-                        <div id="contenedor_de_la_cadena">
-                            <div>
+                        <div id="contenedor_de_la_cadena" class="contenedor_cadena_class">
+                            <div class="sin_derivar_cadena">
                                 <h3>Sin derivar</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -312,7 +317,7 @@
                                 </math>
                             </div>
 
-                            <div>
+                            <div class="derivada_cadena">
                                 <h3>Derivada</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -358,8 +363,8 @@
                             </div>
                         </div>
 
-                        <div id="contenedor_de_funciones_trigonometricas">
-                            <div>
+                        <div id="contenedor_de_funciones_trigonometricas" class="contenedor_trigonometricas_class">
+                            <div class="contenedor_sin_derivar_trigonometricas">
                                 <h3>Sin derivar</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -498,14 +503,13 @@
                                 </math>
                             </div>
 
-                            <div>
+                            <div class="contenedor_derivada_trigonometricas">
                                 <h3>Derivadas</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
                                         <mi>f</mi>
                                         <mspace width="0.4em"/>
-                                <mo>&#x2032;</mo>
-                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
                                         <mrow>
                                             <mo stretchy="false">(</mo>
                                             <mi>x</mi>
@@ -529,8 +533,7 @@
                                     <mrow>
                                         <mi>f</mi>
                                         <mspace width="0.4em"/>
-                                <mo>&#x2032;</mo>
-                                        <mspace width="0.4em"/>
+                                        <mo>&#x2032;</mo>
                                         <mrow>
                                             <mo stretchy="false">(</mo>
                                             <mi>x</mi>
@@ -619,7 +622,6 @@
                                         <mi>f</mi>
                                         <mspace width="0.4em"/>
                                         <mo>&#x2032;</mo>
-                                        <mspace width="0.4em"/>
                                         <mrow>
                                             <mo stretchy="false">(</mo>
                                             <mi>x</mi>
@@ -677,8 +679,8 @@
                             </div>
                         </div>
 
-                        <div id="contenedor_de_funciones_logaritmicas">
-                            <div>
+                        <div id="contenedor_de_funciones_logaritmicas" class="contenedor_logaritmicas_class">
+                            <div class="sin_derivar_logaritmicas">
                                 <h3>Sin derivar</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -753,7 +755,7 @@
                                 </math>
                             </div>
 
-                            <div>
+                            <div class="derivada_logaritmicas">
                                 <h3>Derivada</h3>
 
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -884,8 +886,8 @@
                             </div>
                         </div>
 
-                        <div id="contenedor_de_funciones_exponenciales">
-                            <div>
+                        <div id="contenedor_de_funciones_exponenciales" class="contenedor_de_funciones_exponenciales_class">
+                            <div class="sin_derivar_exponencial">
                                 <h3>Sin derivar</h3>
 
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -915,7 +917,7 @@
                                 </math>
                             </div>
 
-                            <div>
+                            <div class="derivada_exponencial">
                                 <h3>Derivada</h3>
                                 <math xmlns="http://www.w3.org/1998/Math/MathML">
                                     <mrow>
@@ -975,92 +977,102 @@
                     </div>
                 </div>
             </div>
+
             <div id="enunciado_solucion" class="contenedor_enunciado_solucion">
-                <div id="texto">
+                
+                <div id="texto" class="caja_de_texto">
                     <div class="parrafo">
                         <p>
                             La compañía Cartones GT se especializa en la fabricación de cajas cuadradas de dimensiones
                             específicas para el embalaje de diversos productos. El equipo de control de calidad ha 
-                            identificado un problema de desperdicio durante el proceso de fabricación de las cajas, 
-                            ya que quedan piezas cuadradas de diferentes tamaños como remanentes. Según los estándares
+                            identificado un <strong>problema de desperdicio</strong> durante el proceso de fabricación de
+                            las cajas, ya que quedan piezas cuadradas de diferentes tamaños como remanentes. Según los estándares
                             de calidad establecidos, se ha concluido que estas piezas aun pueden ser integradas a la 
                             cadena productiva.
                         </p>
                         <p>
                             Los pedazos cuadrados de cartón que se utilizarán para realizar los nuevos productos, se
-                            cortan según la Figura 6, un cuadrado de cada esquina y doblando los lados. Los
+                            cortan según la ilustración, un cuadrado de cada esquina y doblando los lados. Los
                             cuadrados blancos se han cortado y el cartón se ha doblado a lo largo de las líneas
                             discontinuas. Dependiendo de la medida del cartón cuadrado se obtienen cajas de
                             distintos volúmenes.
                         </p>
                         <p>
                             En una junta directiva, el equipo de ventas logra encontrar un nuevo mercado para cajas
-                            de distintos tamaños por lo que se le ha pedido al equipo de informática un software
-                            para determinar el volumen máximo de cada uno de los retazos, siguiendo solamente la
-                            arista h (ver Figura 6) del cuadrado.
+                            de distintos tamaños por lo que se le ha pedido al equipo de informática un <strong>software</strong>
+                            para determinar el <strong>volumen máximo</strong> de cada uno de los retazos, siguiendo solamente la
+                            arista h (ver ilustración) del cuadrado.
                         </p>
                     </div>
                     <img src="./sources/figura_6.png" alt="Diseño modificado, tomado de Zill, Dennis G., y Warren S. Wright (2011) Cálculo
-                    De Una Variables: Trascendentes Tempranas. 4a. ed. Editorial: McGraw-Hill" title="figura 6" style="border: 1px solid black; padding: 0px; margin: 0px;">
+                    De Una Variables: Trascendentes Tempranas. 4a. ed. Editorial: McGraw-Hill" title="ilustracion">
                 </div>
-                <div id="resolucion">
-                    <label for="arista">de dimension "<em>h</em>" = </label>
-                    <input type="number" id="arista" class="input_independiente">
-                    <label>m.</label> <!--cambiar a p luego-->
-                    <br>
-                    <label>El cambio de volumen respecto a la altura <em>a</em> cumple con la siguiente funcion: </label>
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mfrac>
-                          <mi>dV</mi>
-                          <mi>da</mi>
-                        </mfrac>
-                        <mo>=</mo>
-                        <msup>
-                          <mi>a</mi>
-                          <mn>3</mn>
-                        </msup>
-                        <mo>-</mo>
-                        <mn class="mn_multiplicador">4</mn>
-                        <mi><input type="number" class="inputs_en_math_contenedor_arista"></mi>
-                        <msup>
-                          <mi>a</mi>
-                          <mn>2</mn>
-                        </msup>
-                        <mo>+</mo>
-                        <mi>a</mi>
-                        <msup>
-                          <mi><input type="number" class="inputs_en_math_contenedor_arista"></mi>
-                          <mn>2</mn>
-                        </msup>
-                    </math>
-                    <p>
-                        El volumen maximo de la caja en 
-                        <math>
+
+                <div id="resolucion" class="cada_de_resolucion">
+                    <div class="case_protector">
+                        <label for="arista">Dimension "<em>h</em>" = </label>
+                        <input type="number" id="arista" class="input_independiente">
+                        <label>m.</label>
+                        <br>
+                        <br>
+                        <label>El cambio de volumen respecto a la altura <em>a</em> cumple con la siguiente funcion: </label>
+                        <br>
+                        <br>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mfrac>
+                              <mi>dV</mi>
+                              <mi>da</mi>
+                            </mfrac>
+                            <mo>=</mo>
                             <msup>
-                                <mi>m</mi>
-                                <mn>3</mn>
+                              <mi>a</mi>
+                              <mn>3</mn>
                             </msup>
-                        </math> 
-                        es de:
+                            <mo>-</mo>
+                            <mn class="mn_multiplicador">4</mn>
+                            <mi><input type="number" class="inputs_en_math_contenedor_arista"></mi>
+                            <msup>
+                              <mi>a</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>+</mo>
+                            <mi>a</mi>
+                            <msup>
+                              <mi><input type="number" class="inputs_en_math_contenedor_arista"></mi>
+                              <mn>2</mn>
+                            </msup>
+                        </math>
                         
-                    </p>
-                <label>V = <label id="respuesta_del_volumen_maximo" class="respuesta_volumen"></label></label>
-                <p>Demostrando que el volumen es maximo con el valor de la segunda derivada"</p>
-                <p style="font-size: 20px;">
-                    <math>
-                        <msup>
-                            <mi style="font-size: 40px;">f</mi>
-                            <mrow>
-                                <mi style="font-size: 25px;">&#x2032;&#x2032;</mi>
-                            </mrow>
-                        </msup>
-                        <mo style="font-size: 24px;">(</mo>
-                        <mi style="font-size: 24px;">x</mi>
-                        <mo style="font-size: 24px;">)</mo>
-                    </math>
-                     = 
-                </p>
-                <label id="respuesta_de_la_segunda_derivada"></label>
+                        <p>
+                            El volumen máximo de la caja en  
+                            <math>
+                                <mspace width="0.2em"/>
+                                <msup>
+                                    <mi>m</mi>
+                                    <mn>3</mn>
+                                </msup>
+                            </math> 
+
+                            es:
+                        </p>
+                        <label style="font-size: 20px;">V = <label id="respuesta_del_volumen_maximo" class="respuesta_volumen"></label></label>
+                        <p>Demostrando que el volumen es máximo con el valor de la segunda derivada:</p>
+                        <p>
+                            <math class="respuesta_de_segunda_derivada" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <msup>
+                                    <mi style="font-size: 40px;">f</mi>
+                                    <mrow>
+                                        <mi style="font-size: 25px;">&#x2032;&#x2032;</mi>
+                                    </mrow>
+                                </msup>
+                                <mo style="font-size: 24px;">(</mo>
+                                <mi style="font-size: 24px;">x</mi>
+                                <mo style="font-size: 24px;">)</mo>
+                            </math>
+                             =
+                             <label id="respuesta_de_la_segunda_derivada" style="font-size: 20px;"></label> 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,5 @@
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -8,6 +10,10 @@ body::-webkit-scrollbar {
 
 h1, p, label, math {
     color: white;
+}
+
+h1, h2, h3, p, label {
+    font-family: "Roboto Mono", monospace;
 }
 
 body {
@@ -39,7 +45,7 @@ h1 {
 
 .conteneder_principal {
     margin: 20px;
-    height: 640px;
+    height: 850px;
     display: flex;
     flex-direction: column;
     flex-shrink: 2;
@@ -68,8 +74,8 @@ h1 {
 
 .contenedor_de_las_derivadas {
     margin: 20px;
-    width: 96.5%;
-    height: 550px;
+    width: 75%;
+    height: 560px;
     display: flex;
     flex-direction: column;
     flex-shrink: 2;
@@ -78,12 +84,18 @@ h1 {
 }
 
 .contenedor_de_las_derivadas select {
-    width: 60%;
+    width: 75%;
     height: 30px;
     border-radius: 5px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(30px);
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+select * {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 select:focus {
@@ -91,8 +103,8 @@ select:focus {
 }
 
 .contenedor_para_reglas {
-    width: 90%;
-    height: 93%;
+    width: 94%;
+    height: 95%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     display: flex;
@@ -111,12 +123,212 @@ select:focus {
 
 .contenedor_contexto {
     width: 25%;
-    height: 100%;
+    height: 95.3%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: rgba(1, 1, 1, 0.3);
     backdrop-filter: blur(10px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
 }
+
+.contenedor_contexto h2 {
+    color: white;
+    height: 20%;
+    
+}
+
+.contenedor_contexto p {
+    text-align: justify;
+    height: 80%;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.contenedor_por_definicion_class {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.contenedor_por_definicion_class h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.contenedor_producto_class {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sin_derivar_producto, .derivada_producto {
+    width: 50%;
+    font-size: 20px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.contenedor_cociente_class {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sin_derivar_cociente, .derivada_cociente {
+    height: 50%;
+    align-content: center;
+    align-self: center;
+    font-size: 30px;
+}
+
+.derivada_producto h3, .derivada_cociente h3, .derivada_cadena h3 {
+    margin-top: 0px;
+}
+
+.contenedor_cadena_class {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sin_derivar_cadena, .derivada_cadena {
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.derivada_cociente h3, .derivada_cadena {
+    text-align: center;
+}
+
+.contenedor_trigonometricas_class {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ .contenedor_sin_derivar_trigonometricas, .contenedor_derivada_trigonometricas {
+    width: 50%;
+    height: 96.5%;
+    align-content: center;
+    margin: 10px;
+    font-size: 25px;
+    text-align: center;
+ }
+
+ .contenedor_sin_derivar_trigonometricas math, .contenedor_derivada_trigonometricas math {
+    margin: 10px;
+ }
+
+ .contenedor_sin_derivar_trigonometricas h3, .contenedor_derivada_trigonometricas h3 {
+    margin-top: 0px;
+ }
+
+ .contenedor_logaritmicas_class {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+
+ .sin_derivar_logaritmicas, .derivada_logaritmicas {
+    width: 50%;
+    height: 96.5%;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+    font-size: 25px;
+ }
+
+ .sin_derivar_logaritmicas math, .derivada_logaritmicas math {
+    margin: 10px;
+ }
+
+ .contenedor_de_funciones_exponenciales_class {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .sin_derivar_exponencial, .derivada_exponencial {
+    height: 50%;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+ }
+
+ .sin_derivar_exponencial h3 {
+    margin-top: 0px;
+ }
+
+ .contenedor_enunciado_solucion {
+    margin: 20px;
+    width: 75%;
+    height: 560px;
+    display: flex;
+    flex-direction: row;
+ } 
+
+ .caja_de_texto {
+    text-align: center;
+    width: 80%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(1, 1, 1, 0.3);
+    backdrop-filter: blur(10px);
+ }
+
+ .caja_de_texto p {
+    margin: 20px;
+    text-align: justify;
+    font-size: 14px;
+ }
+
+.caja_de_texto img {
+    width: 650px;
+    height: 250px;
+}
+
+.cada_de_resolucion {
+    width: 25%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.case_protector {
+    height: 100%;
+    width: 82.5%;
+    margin: 20px;
+}
+
+.input_independiente {
+    width: 35%;
+}
+
+.cada_de_resolucion p, .cada_de_resolucion label {
+    color: black;
+}
+
 
 .inputs_en_math_contenedor_altura, .inputs_en_math_contenedor_arista {
     width: 20px;

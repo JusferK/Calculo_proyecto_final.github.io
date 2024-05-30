@@ -12,12 +12,12 @@ let lista_de_las_reglas = [
 ];
 
 let contextos_de_formulas = [
-    {titulo: 'Derivada por definicion', contexto: 'La fórmula de la derivada por definición se basa en el concepto del límite y se usa para encontrar la pendiente de la tangente a la curva de una función en un punto específico.'},
+    {titulo: 'Derivada por definición', contexto: 'La fórmula de la derivada por definición se basa en el concepto del límite y se usa para encontrar la pendiente de la tangente a la curva de una función en un punto específico.'},
     {titulo: 'Regla del producto', contexto: 'La fórmula de la derivada del producto nos permite encontrar la derivada de una función que es el producto de dos funciones distintas. Para derivar el producto de dos funciones, mantén una función constante y deriva la otra, luego viceversa, y suma ambos resultados.'},
     {titulo: 'Regla del conciente', contexto: 'La fórmula de la derivada del cociente nos permite encontrar la derivada de una función que es el cociente de dos funciones distintas. Para derivar el cociente de dos funciones, primero derivas el numerador multiplicado por el denominador, luego restas el numerador por el denominador derivado, todo esto dividido por el cuadrado del denominador.'},
     {titulo: 'Regla de la cadena', contexto: 'Esta regla establece cómo encontrar la derivada de una función compuesta de dos funciones diferentes. La regla de la cadena nos permite descomponer una función complicada en partes más simples y luego derivarlas individualmente.'},
     {titulo: 'Funciones trigonometricas', contexto: 'La derivación de las funciones trigonométricas es el proceso matemático de encontrar el ritmo al cual una función trigonométrica cambia respecto de la variable independiente; es decir, la derivada de la función. Las funciones trigonométricas más habituales son las funciones sen(x), cos(x) y tan(x).'},
-    {titulo: 'Funciones logaritmicas', contexto: 'La derivación logarítmica es una técnica de derivación que nos permite hallar la derivada de una función aplicando las propiedades de los logaritmos'},
+    {titulo: 'Funciones logarítmicas', contexto: 'La derivación logarítmica es una técnica de derivación que nos permite hallar la derivada de una función aplicando las propiedades de los logaritmos'},
     {titulo: 'Funciones exponenciales', contexto: 'La derivada es la función original multiplicada por el logaritmo natural de la base. Esto se debe a las propiedades de la función exponencial y la regla de la cadena en cálculo.'}
 ];
 
